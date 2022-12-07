@@ -1,4 +1,24 @@
 <?php
+
+class Movie
+{
+    public $titolo;
+    public $desc;
+    public $genere;
+
+    function __construct($titolo, $desc, $genere)
+    {
+        $this->titolo = $titolo;
+        $this->desc = $desc;
+        $this->genere = $genere;
+    }
+}
+$matrix = new Movie('Matrix', 'Lorem matrix', 'Fantasy');
+$avatar = new Movie('Avatar', 'Lorem', 'Fantasy');
+
+var_dump($matrix);
+var_dump($avatar);
+
 ?>
 <!doctype html>
 <html lang="en">
