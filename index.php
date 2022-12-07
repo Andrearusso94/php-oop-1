@@ -1,12 +1,19 @@
 <?php
 
-require __DIR__ . '/Models/db.php';
-require __DIR__ . '/Models/genere.php';
-
+require __DIR__ . '/Models/Movie.php';
+require __DIR__ . '/Models/Genere.php';
 
 $matrix = new Movie('Matrix', 'Universo rosso e blu', new Genere('Fantasy'));
 $fast_8 = new Movie('Fast 8', 'Toretto forever', new Genere('Azione'));
+
+$db = [
+    new Movie('Matrix', 'Universo rosso e blu', new Genere('Fantasy')),
+    new Movie('Fast 8', 'Toretto forever', new Genere('Azione'))
+];
+
 var_dump($matrix, $fast_8);
+
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -27,7 +34,21 @@ var_dump($matrix, $fast_8);
         <!-- place navbar here -->
     </header>
     <main>
+        <div class="card">
 
+            <?php foreach ($db as $movie) : ?>
+                <ul class="list-group list-group-flush">
+                    <?php foreach ($movie as $key => $item) : ?>
+                        <li scope="row"> Title : <?php echo $item ?>
+
+                        </li>
+                    <?php endforeach; ?>
+
+
+                <?php endforeach; ?>
+
+                </ul>
+        </div>
     </main>
     <footer>
         <!-- place footer here -->

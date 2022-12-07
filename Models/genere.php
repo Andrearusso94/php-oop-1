@@ -1,10 +1,10 @@
 <?php
 class Genere
 {
-    public $genere;
+    public $name;
 
-    public function __construct($genere)
+    public function __construct($name)
     {
-        $this->genere = $genere;
+        $this->name = $name;
     }
 }
