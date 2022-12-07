@@ -3,9 +3,10 @@
 require __DIR__ . '/Models/db.php';
 require __DIR__ . '/Models/genere.php';
 
+
 $matrix = new Movie('Matrix', 'Universo rosso e blu', new Genere('Fantasy'));
 $fast_8 = new Movie('Fast 8', 'Toretto forever', new Genere('Azione'));
-var_dump($movie, $fast_8);
+var_dump($matrix, $fast_8);
 ?>
 <!doctype html>
 <html lang="en">
