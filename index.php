@@ -1,5 +1,4 @@
 <?php
-
 require __DIR__ . '/Models/Movie.php';
 require __DIR__ . '/Models/Genere.php';
 
@@ -10,10 +9,6 @@ $db = [
     new Movie('Matrix', 'Universo rosso e blu', new Genere('Fantasy')),
     new Movie('Fast 8', 'Toretto forever', new Genere('Azione'))
 ];
-
-var_dump($matrix, $fast_8);
-
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -38,11 +33,11 @@ var_dump($matrix, $fast_8);
 
             <?php foreach ($db as $movie) : ?>
                 <ul class="list-group list-group-flush">
-                    <?php foreach ($movie as $key => $item) : ?>
-                        <li scope="row"> Title : <?php echo $item ?>
 
-                        </li>
-                    <?php endforeach; ?>
+                    <li scope="row"> Title : <?php echo $movie->titolo ?> </li>
+                    <li scope="row"> Desc : <?php echo $movie->desc ?> </li>
+                    <li scope="row"> Genere : <?php echo $movie->genere->name ?> </li>
+
 
 
                 <?php endforeach; ?>
