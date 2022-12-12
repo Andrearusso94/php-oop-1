@@ -1,14 +1,5 @@
 <?php
-require __DIR__ . '/Models/Movie.php';
-require __DIR__ . '/Models/Genere.php';
-
-$matrix = new Movie('Matrix', 'Universo rosso e blu', new Genere('Fantasy'));
-$fast_8 = new Movie('Fast 8', 'Toretto forever', new Genere('Azione'));
-
-$db = [
-    new Movie('Matrix', 'Universo rosso e blu', new Genere('Fantasy')),
-    new Movie('Fast 8', 'Toretto forever', new Genere('Azione'))
-];
+require __DIR__ . '/Models/db.php';
 ?>
 <!doctype html>
 <html lang="en">
